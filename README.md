@@ -22,7 +22,7 @@ For more documentation, please look to the **payment controller** in **Controlle
 This route has 1 API end points,and is responsible for deposit operations.<br/>
 For more documentation, please look to the **deposit controller** in **Controllers** directory
 
-## WithDraw
+## Withdraw
 This route has 1 API end points,and is responsible for withdraw operations.<br/>
 For more documentation, please look to the **withdraw controller** in **Controllers** directory
 
