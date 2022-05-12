@@ -4,7 +4,7 @@ const postAccount = (req,res)=>{
     /* 
     Checks the currencycode and the accountType of the request body
     if the currencyCode and accountType is not in the given enums
-    we return response with status code 403, indicating bad request.
+    we return response with status code 400, indicating bad request.
     If the currencyCode and accountType is in the enums, and the accountNumber
     does not exists in the db(memory in this case) we create the account, default balance is 0
 
@@ -17,10 +17,10 @@ const postAccount = (req,res)=>{
         const currencyCode = utils.currencies.indexOf(req.body.currencyCode)
         const accountType = utils.accountTypes.indexOf(req.body.accountType)
         if(currencyCode === -1 ||accountType === -1){
-            return res.status(403).json("Currency Code or Account type not supported!!\nPlease check your credentials!!!");
+            return res.status(400).json("Currency Code or Account type not supported!!\nPlease check your credentials!!!");
         }
         if(accounts.find((element)=>element.accountNumber === req.body.accountNumber)){
-            return res.status(403).json("Account Number Exists!!");
+            return res.status(400).json("Account Number Exists!!");
         }
         const account = {
             accountNumber:req.body.accountNumber,
