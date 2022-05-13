@@ -29,7 +29,7 @@ This route has 2 API end points,and is responsible for account operations.<br/>
 For more documentation, please look to the **account controller** in **Controllers** directory
 #### Account Controller
 Account controller has two functions:<br/>
-      **PostAccount**<hr> <br/>
+      **PostAccount**<br/><br/>
       Checks the currencycode and the accountType of the request body
       if the currencyCode and accountType is not in the given enums
       we return response with status code 400, indicating bad request.
