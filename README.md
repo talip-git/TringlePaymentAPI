@@ -33,7 +33,7 @@ Account controller has two functions:<br/><br/>
       if the currencyCode and accountType is not in the given enums
       we return response with status code 400, indicating bad request.
       If the currencyCode and accountType is in the enums, and the accountNumber
-      does not exists in the db(memory in this case) we create the account, default balance is 0.<br/>
+      exists in the db(memory in this case) we create the account, default balance is 0.<br/>
       **!!!Important note, enums are basicily special integers, we cant directly create enums in Javascript
       therefore, I created constant arrays with supported currencies and account types in the utils directory
       we pick the enums based on the array index
