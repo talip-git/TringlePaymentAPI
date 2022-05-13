@@ -19,22 +19,22 @@ Run **npm test** command the start the tests.
 - /withdraw
 - /accounting
 
-## Account
+### Account
 This route has 2 API end points,and is responsible for account operations.<br/>
 For more documentation, please look to the **account controller** in **Controllers** directory
 
-## Payment
+### Payment
 This route has 1 API end point,and is responsible for payment operations.<br/>
 For more documentation, please look to the **payment controller** in **Controllers** directory
 
-## Deposit
+### Deposit
 This route has 1 API end point,and is responsible for deposit operations.<br/>
 For more documentation, please look to the **deposit controller** in **Controllers** directory
 
-## Withdraw
+### Withdraw
 This route has 1 API end point,and is responsible for withdraw operations.<br/>
 For more documentation, please look to the **withdraw controller** in **Controllers** directory
 
-## Accounting
+### Accounting
 This route has 1 API end point,and is responsible for transaction operations.<br/>
 For more documentation, please look to the **transaction controller** in **Controllers** directory
