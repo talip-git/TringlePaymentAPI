@@ -45,7 +45,7 @@ Account controller has two functions:<br/><br/>
 ## Payment
 This route has 1 API end point,and is responsible for payment operations.<br/>
 ### Payment Controller
-Payment controller has two functions:<br/><br/>
+Payment controller has one function:<br/><br/>
       **postPayment**<br/>
         This controller is responsible for the payments in the API,
         Firstly, we check whether the given sender accounts and reviever accounts
@@ -58,7 +58,7 @@ Payment controller has two functions:<br/><br/>
 ## Deposit
 This route has 1 API end point,and is responsible for deposit operations.<br/>
 ### Deposit Controller
-Deposit controller has two functions:<br/><br/>
+Deposit controller has one function:<br/><br/>
       **postDeposit**<br/>
         This controller is responsible for depositing to the account balance.
         Firstly we check whether the acccount number exists, if exists, we continue,
@@ -71,7 +71,7 @@ Deposit controller has two functions:<br/><br/>
 ## Withdraw
 This route has 1 API end point,and is responsible for withdraw operations.<br/>
 ### Withdraw Controller
-Withdraw controller has two functions:<br/><br/>
+Withdraw controller has one function:<br/><br/>
       **postWithdraw**<br/>
         Controller which is responsible for withdraw operation.
         Firstly we check whether is the given accountNumber exists in our accounts array,
@@ -82,7 +82,7 @@ Withdraw controller has two functions:<br/><br/>
 ## Accounting
 This route has 1 API end point,and is responsible for transaction operations.<br/>
 ### TransactionController
-Transaction controller has two functions:<br/><br/>
+Transaction controller has one function:<br/><br/>
       **getTransactions**<br/>
         Returns the transactions of the accountNumber.
         We do not a validation here, since transaction history can be zero.
