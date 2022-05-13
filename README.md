@@ -24,10 +24,10 @@ Run **npm test** command the start the tests.
 - /withdraw
 - /accounting
 
-### Account
+## Account
 This route has 2 API end points,and is responsible for account operations.<br/>
 For more documentation, please look to the **account controller** in **Controllers** directory
-#### Account Controller
+### Account Controller
 Account controller has two functions:<br/><br/>
       **PostAccount**<br/>
       Checks the currencycode and the accountType of the request body
