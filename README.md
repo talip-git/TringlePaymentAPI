@@ -29,8 +29,8 @@ This route has 2 API end points,and is responsible for account operations.<br/>
 ### Account Controller
 Account controller has two functions:<br/><br/>
       **postAccount**<br/>
-      Checks the currencycode and the accountType of the request body
-      if the currencyCode and accountType is not in the given enums
+      Checks the currencycode and the accountType of the request body.
+      If the currencyCode and accountType is not in the given enums,
       we return response with status code 400, indicating bad request.
       If the currencyCode and accountType is in the enums, and the accountNumber does not
       exists in the db(memory in this case), we create the account, default balance is 0.<br/>
