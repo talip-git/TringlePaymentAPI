@@ -33,13 +33,13 @@ Account controller has two functions:<br/><br/>
       if the currencyCode and accountType is not in the given enums
       we return response with status code 400, indicating bad request.
       If the currencyCode and accountType is in the enums, and the accountNumber does not
-      exists in the db(memory in this case) we create the account, default balance is 0.<br/>
+      exists in the db(memory in this case), we create the account, default balance is 0.<br/>
       **!!!Important note, enums are basicily special integers, we cant directly create enums in Javascript
-      therefore, I created constant arrays with supported currencies and account types in the utils directory
-      we pick the enums based on the array index
+      therefore, I created constant arrays with supported currencies and account types in the utils directory,
+      we pick the enums based on the array index.
       In case of any server error, we return status code 500(Internal Server Error)**<br/><br/>
       **getAccount**<br/>
-        Checks the account based on the parameter, if the accound exists, we return it with the status code 200 else, we return 404 Not Found.
+        Checks the account based on the parameter, if the account exists, we return it with the status code 200 else, we return 404 Not Found.
         In case of any server error, we return status code 500(Internal Server Error).  
     
 ## Payment
@@ -49,10 +49,10 @@ Payment controller has one function:<br/><br/>
       **postPayment**<br/>
         This controller is responsible for the payments in the API,
         Firstly, we check whether the given sender accounts and reviever accounts
-        exists, if the exists then we take the given amount from the senders balance,
-        and add that amount to the recievers amount. Furthermore, we create a transaction
-        with type 1 indicating payment and push it to our Transactions array.
-        If either one of the accountNumbers is wrong, then we send a request with status code 404.
+        exists, if exists then we take the given amount from the senders balance,
+        and add that amount to the recievers balance. Furthermore, we create a transaction
+        with type 1, indicating payment, and push it to our Transactions array.
+        If either one of the accountNumbers does not exists, then we send a request with status code 404.
         Later we update the senders and recievers account.
         In case of any server error, we return status code 500(Internal Server Error).<br/><br/>  
 ## Deposit
@@ -62,11 +62,11 @@ Deposit controller has one function:<br/><br/>
       **postDeposit**<br/>
         This controller is responsible for depositing to the account balance.
         Firstly we check whether the acccount number exists, if exists, we continue,
-        else we return a response with status code 404 Not Found
+        else we return a response with status code 404 Not Found.
         If the account number exists, then we increase the balance of the account
         according to the given amount in the request body.
-        Furthermore,we crate a Transaction with the date today and type 2(indicating deposit)
-        and add them to our db(memory in this API)
+        Furthermore,we crate a Transaction with the date today, and type 2(indicating deposit)
+        and add them to our db(memory in this API).
         In case of any server error, we return status code 500(Internal Server Error).<br/><br/>  
 ## Withdraw
 This route has 1 API end point,and is responsible for withdraw operations.<br/>
@@ -84,6 +84,6 @@ This route has 1 API end point,and is responsible for transaction operations.<br
 ### TransactionController
 Transaction controller has one function:<br/><br/>
       **getTransactions**<br/>
-        Returns the transactions of the accountNumber.
+        Returns the list of transactions of the accountNumber.
         We do not a validation here, since transaction history can be zero.
         In case of any server error, we return status code 500(Internal Server Error)<br/><br/>  
