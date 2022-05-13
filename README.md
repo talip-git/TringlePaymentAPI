@@ -3,6 +3,14 @@ In this API, we simulate a basic payment transaction API.<br/>
 
 **There is No Database connection, everything is stored in the memory**
 
+# Run The API Without Docker
+I you are not going to use Docker, then you need to install Node.js to your computer first.
+Firsly open your cmd and cd to the project directory, then run **npm install** command, this will install the dependencies you need.
+After you install the dependencies run **npm start** command, this will start the application.
+
+## Runing Tests
+Run **npm test** command the start the tests.
+
 **We have 5 different routes in this API.**<br/>
 - /account
 - /payment
@@ -15,17 +23,17 @@ This route has 2 API end points,and is responsible for account operations.<br/>
 For more documentation, please look to the **account controller** in **Controllers** directory
 
 ## Payment
-This route has 1 API end points,and is responsible for payment operations.<br/>
+This route has 1 API end point,and is responsible for payment operations.<br/>
 For more documentation, please look to the **payment controller** in **Controllers** directory
 
 ## Deposit
-This route has 1 API end points,and is responsible for deposit operations.<br/>
+This route has 1 API end point,and is responsible for deposit operations.<br/>
 For more documentation, please look to the **deposit controller** in **Controllers** directory
 
 ## Withdraw
-This route has 1 API end points,and is responsible for withdraw operations.<br/>
+This route has 1 API end point,and is responsible for withdraw operations.<br/>
 For more documentation, please look to the **withdraw controller** in **Controllers** directory
 
 ## Accounting
-This route has 1 API end points,and is responsible for transaction operations.<br/>
+This route has 1 API end point,and is responsible for transaction operations.<br/>
 For more documentation, please look to the **transaction controller** in **Controllers** directory
