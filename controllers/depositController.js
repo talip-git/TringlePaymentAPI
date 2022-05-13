@@ -8,7 +8,7 @@ const postDeposit = (req,res)=>{
         according to the given amount in the request body.
         Furthermore,we crate a Transaction with the date today and type 2(indicating deposit)
         and add them to our db(memory in this API)
-        In case of any server error, we return status code 500(Internal Server Error)
+        In case of any server error, we return status code 500(Internal Server Error).
     */
     try {
         const accountIndex = accounts.findIndex((account) =>account.accountNumber === req.body.accountNumber);
