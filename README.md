@@ -28,7 +28,7 @@ Run **npm test** command the start the tests.
 This route has 2 API end points,and is responsible for account operations.<br/>
 For more documentation, please look to the **account controller** in **Controllers** directory
 ### Account Controller
-Account controller has two functions:<br/><br/>
+Account controller has two functions:<br/>
       **PostAccount**<br/>
       Checks the currencycode and the accountType of the request body
       if the currencyCode and accountType is not in the given enums
@@ -43,18 +43,18 @@ Account controller has two functions:<br/><br/>
         Checks the account based on the parameter, if the accound exists, we return it with the status code 200 else, we return 404 Not Found.
         In case of any server error, we return status code 500(Internal Server Error).  
     
-### Payment
+## Payment
 This route has 1 API end point,and is responsible for payment operations.<br/>
 For more documentation, please look to the **payment controller** in **Controllers** directory
 
-### Deposit
+## Deposit
 This route has 1 API end point,and is responsible for deposit operations.<br/>
 For more documentation, please look to the **deposit controller** in **Controllers** directory
 
-### Withdraw
+## Withdraw
 This route has 1 API end point,and is responsible for withdraw operations.<br/>
 For more documentation, please look to the **withdraw controller** in **Controllers** directory
 
-### Accounting
+## Accounting
 This route has 1 API end point,and is responsible for transaction operations.<br/>
 For more documentation, please look to the **transaction controller** in **Controllers** directory
