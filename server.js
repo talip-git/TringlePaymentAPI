@@ -19,3 +19,5 @@ app.use("/accounting",accountingRoute);
 app.listen(5050,()=>{
     console.log(`Server is listening on port ${5050} ...`)
 })
+
+module.exports = app;
