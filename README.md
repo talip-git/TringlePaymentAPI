@@ -11,6 +11,7 @@ After you install the dependencies run **npm start** command, this will start th
 ## Runing Tests
 Run **npm test** command the start the tests.
 
+## API
 **We have 5 different routes in this API.**<br/>
 - /account
 - /payment
