@@ -27,7 +27,19 @@ Run **npm test** command the start the tests.
 ### Account
 This route has 2 API end points,and is responsible for account operations.<br/>
 For more documentation, please look to the **account controller** in **Controllers** directory
-
+#### Account Controller
+Account controller has two functions:<br/>
+  **postAccount**
+    Checks the currencycode and the accountType of the request body
+    if the currencyCode and accountType is not in the given enums
+    we return response with status code 400, indicating bad request.
+    If the currencyCode and accountType is in the enums, and the accountNumber
+    does not exists in the db(memory in this case) we create the account, default balance is 0
+    !!!Important note, enums are basicily special integers, we cant directly create enums in Javascript
+    therefore, I created constant arrays iwth supported currencies and account types in the utils directory
+    we pick the enums based on the array index
+    In case of any server error, we return status code 500(Internal Server Error)
+    
 ### Payment
 This route has 1 API end point,and is responsible for payment operations.<br/>
 For more documentation, please look to the **payment controller** in **Controllers** directory
