@@ -2,16 +2,14 @@ const {accounts} = require("../data/db")
 const utils = require("../utils/util")
 const postAccount = (req,res)=>{
     /* 
-    Checks the currencycode and the accountType of the request body
-    if the currencyCode and accountType is not in the given enums
-    we return response with status code 400, indicating bad request.
-    If the currencyCode and accountType is in the enums, and the accountNumber
-    does not exists in the db(memory in this case) we create the account, default balance is 0
-
-    !!!Important note, enums are basicily special integers, we cant directly create enums in Javascript
-    therefore, I created constant arrays iwth supported currencies and account types in the utils directory
-    we pick the enums based on the array index
-    In case of any server error, we return status code 500(Internal Server Error)
+        Checks the currencycode and the accountType of the request body. 
+        If the currencyCode and accountType is not in the given enums, we return response with status code 400, indicating bad request. 
+        If the currencyCode and accountType is in the enums, and the accountNumber does not exists in the db(memory in this case), 
+        we create the account, default balance is 0.
+        !!!Important note, enums are basicily special integers, we cant directly create enums in Javascript therefore, 
+        I created constant arrays with supported currencies and account types in the utils directory, 
+        we pick the enums based on the array index. 
+        In case of any server error, we return status code 500(Internal Server Error)
     */
     try {
         const currencyCode = utils.currencies.indexOf(req.body.currencyCode)
