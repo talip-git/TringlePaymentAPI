@@ -5,7 +5,7 @@ In this API, we simulate a basic payment transaction API.<br/>
 
 # Run The API Without Docker
 If you are not going to use Docker, then you need to install Node.js to your computer first.
-Firsly open your cmd and cd to the project directory, then run **npm install** command, this will install the dependencies you need.
+Firstly open your cmd and cd to the project directory, then run **npm install** command, this will install the dependencies you need.
 After you install the dependencies run **npm start** command, this will start the application.
 
 ## Runing Tests
