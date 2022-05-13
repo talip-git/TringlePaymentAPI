@@ -36,9 +36,12 @@ Account controller has two functions:<br/><br/>
       If the currencyCode and accountType is in the enums, and the accountNumber
       does not exists in the db(memory in this case) we create the account, default balance is 0.<br/>
       **!!!Important note, enums are basicily special integers, we cant directly create enums in Javascript
-      therefore, I created constant arrays iwth supported currencies and account types in the utils directory
+      therefore, I created constant arrays with supported currencies and account types in the utils directory
       we pick the enums based on the array index
-      In case of any server error, we return status code 500(Internal Server Error)**
+      In case of any server error, we return status code 500(Internal Server Error)**<br/><br/>
+      **GetAccount**<br/>
+        Checks the account based on the parameter, if the accound exists, we return it with the status code 200 else, we return 404 Not Found.
+        In case of any server error, we return status code 500(Internal Server Error).  
     
 ### Payment
 This route has 1 API end point,and is responsible for payment operations.<br/>
