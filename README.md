@@ -4,9 +4,10 @@ In this API, we simulate a basic payment transaction API.<br/>
 **There is No Database connection, everything is stored in the memory**
 # Run With Docker
 Run the following commands in order to run it with docker <br/>
+  ```
   docker build https://github.com/talip-git/TringlePaymentAPI.git -t tringle <br/>
   docker run -p 5050:5050 tringle <br/>
-  
+  ```
 # Run The API Without Docker
 If you are not going to use Docker, then you need to install Node.js to your computer first.
 Firstly open your cmd and cd to the project directory, then run **npm install** command, this will install the dependencies you need.
